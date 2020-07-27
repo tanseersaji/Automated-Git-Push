@@ -1,0 +1,13 @@
+FILES=$1
+BRANCH=$2
+MESSAGE=$3
+
+echo "----- STARTING PROCESS -----"
+git status
+
+git add ${FILES}
+echo "----- ADDED FILES -----"
+git status
+
+git commit -m "${MESSAGE}"
+git push origin ${BRANCH}
